@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Siyaram Kumar | Royal Tribute</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#050505;
+    color:#fff;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* Royal Animated Background */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at 20% 20%,rgba(255,215,0,.35),transparent 25%),
+        radial-gradient(circle at 80% 80%,rgba(255,215,0,.25),transparent 25%),
+        radial-gradient(circle at 50% 50%,rgba(255,255,255,.08),transparent 40%);
+    animation:glowMove 12s ease-in-out infinite alternate;
+    z-index:-3;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:-100%;
+    background:linear-gradient(
+        120deg,
+        transparent 20%,
+        rgba(255,215,0,.18) 45%,
+        rgba(255,255,255,.12) 50%,
+        rgba(255,215,0,.18) 55%,
+        transparent 80%
+    );
+    animation:lightSweep 15s linear infinite;
+    z-index:-2;
+}
+
+@keyframes glowMove{
+    0%{
+        transform:translate(-5%,-5%) scale(1);
+    }
+    50%{
+        transform:translate(5%,3%) scale(1.15);
+    }
+    100%{
+        transform:translate(-3%,5%) scale(1);
+    }
+}
+
+@keyframes lightSweep{
+    0%{
+        transform:translateX(-40%) rotate(0deg);
+    }
+    100%{
+        transform:translateX(40%) rotate(360deg);
+    }
+}
+
+/* Header */
+
+header{
+
+padding:80px 20px;
+text-align:center;
+background:linear-gradient(135deg,#000,#1a1a1a,#000);
+border-bottom:2px solid gold;
+box-shadow:0 0 30px gold;
+}
+
+header h1{
+
+font-family:'Cinzel',serif;
+font-size:4rem;
+color:#FFD700;
+text-shadow:
+0 0 10px gold,
+0 0 20px gold,
+0 0 40px gold;
+letter-spacing:4px;
+}
+
+header p{
+margin-top:15px;
+font-size:1.3rem;
+color:#f5d76e;
+}
+
+/* Hero */
+
+.hero{
+
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+padding:70px 30px;
+gap:50px;
+
+}
+
+.hero img{
+
+width:280px;
+height:280px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid gold;
+
+box-shadow:
+0 0 20px gold,
+0 0 40px #FFD700,
+0 0 70px #FFD700;
+
+transition:.5s;
+
+}
+
+.hero img:hover{
+
+transform:scale(1.08) rotate(2deg);
+
+box-shadow:
+0 0 30px gold,
+0 0 60px gold,
+0 0 120px gold;
+
+}
+
+.about{
+
+max-width:650px;
+padding:30px;
+background:rgba(255,255,255,.06);
+
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(255,215,0,.3);
+
+border-radius:20px;
+
+box-shadow:0 0 25px rgba(255,215,0,.25);
+
+}
+
+.about h2{
+
+font-family:'Cinzel',serif;
+color:#FFD700;
+margin-bottom:20px;
+font-size:2rem;
+
+}
+
+.about p{
+
+line-height:1.8;
+font-size:18px;
+color:#ddd;
+
+}
+
+/* Cards */
+
+.info{
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+padding:30px;
+
+}
+
+.card{
+
+width:280px;
+padding:30px;
+text-align:center;
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(255,215,0,.4);
+
+border-radius:20px;
+
+transition:.5s;
+
+box-shadow:0 0 20px rgba(255,215,0,.2);
+
+}
+
+.card:hover{
+
+transform:translateY(-15px);
+
+background:linear-gradient(135deg,#2c2100,#111);
+
+box-shadow:
+0 0 20px gold,
+0 0 50px gold;
+
+}
+
+.card h3{
+
+color:#FFD700;
+margin-bottom:15px;
+font-family:'Cinzel',serif;
+font-size:24px;
+
+}
+
+.card p{
+
+color:#ddd;
+line-height:1.6;
+
+}
+
+/* Quote */
+
+.quote{
+
+margin:70px auto;
+width:90%;
+max-width:1000px;
+
+padding:60px;
+
+text-align:center;
+
+border-radius:20px;
+
+background:linear-gradient(135deg,#111,#2c2100,#111);
+
+border:2px solid gold;
+
+box-shadow:0 0 30px rgba(255,215,0,.4);
+
+}
+
+.quote h2{
+
+font-family:'Cinzel',serif;
+color:#FFD700;
+font-size:2.2rem;
+margin-bottom:20px;
+
+}
+
+.quote p{
+
+font-size:22px;
+font-style:italic;
+color:#fff8dc;
+
+}
+
+/* Footer */
+
+footer{
+
+margin-top:50px;
+padding:25px;
+
+text-align:center;
+
+background:#000;
+
+border-top:2px solid gold;
+
+color:#f7d86d;
+
+}
+
+/* Button */
+
+.btn{
+
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+
+background:linear-gradient(45deg,#FFD700,#b8860b);
+
+color:#000;
+
+font-weight:bold;
+
+border-radius:40px;
+
+text-decoration:none;
+
+transition:.4s;
+
+}
+
+.btn:hover{
+
+transform:scale(1.1);
+
+box-shadow:
+0 0 20px gold,
+0 0 40px gold;
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+header h1{
+
+font-size:2.7rem;
+
+}
+
+.hero{
+
+flex-direction:column;
+
+}
+
+.hero img{
+
+width:220px;
+height:220px;
+
+}
+
+.about{
+
+text-align:center;
+
+}
+
+.youtube-btn{
+    background:#FF0000;
+    color:#fff;
+}
+
+.youtube-btn:hover{
+    background:#cc0000;
+    box-shadow:
+        0 0 20px #ff0000,
+        0 0 40px #ff0000;
+}
+
+
+
+.instagram-btn{
+    background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+    color:#fff;
+}
+
+.instagram-btn:hover{
+    transform:scale(1.1);
+    box-shadow:
+        0 0 20px #e1306c,
+        0 0 40px #e1306c;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>SIYARAM KUMAR</h1>
+
+<p>👑 Chemistry Mentor | Unacademy Educator 👑</p>
+
+</header>
+
+<section class="hero">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNRXAs1GUhCYbOiM4Q_JIDartrA1HcPOntafsmeYiqxg&s=10">
+
+<div class="about">
+
+<h2>About Siyaram Kumar</h2>
+
+<p>
+
+Siyaram Kumar is one of the most respected Chemistry educators for IIT-JEE aspirants.
+With 14+ years of teaching excellence, his conceptual approach and inspiring mentorship
+have helped thousands of students achieve their dreams.
+
+</p>
+
+<a href="about siyaram kumar .html" class="btn">Explore More</a>
+
+<br><br>
+
+<a href="https://www.youtube.com/results?search_query=siyaram+kumar"
+   class="btn youtube-btn"
+   target="_blank">
+   ▶ Visit YouTube
+</a>
+
+
+<br><br>
+
+<a href="https://www.instagram.com/iamsiyaramkumar/"
+   class="btn instagram-btn"
+   target="_blank">
+   Visit Instagram
+</a>
+
+
+</div>
+
+</section>
+
+<section class="info">
+
+<div class="card">
+
+<h3>Experience</h3>
+
+<p>14+ Years of Teaching Excellence</p>
+
+</div>
+
+<div class="card">
+
+<h3>Specialization</h3>
+
+<p>IIT-JEE Chemistry</p>
+
+</div>
+
+<div class="card">
+
+<h3>Platform</h3>
+
+<p>Unacademy</p>
+
+</div>
+
+<div class="card">
+
+<h3>Social Media</h3>
+
+<p>Instagram<br>@iamsiyaramkumar</p>
+
+<br>
+
+<p>YouTube<br>Siyaram Kumar</p>
+
+</div>
+
+</section>
+
+<section class="quote">
+
+<h2>Teaching Philosophy</h2>
+
+<p>
+
+"Understanding concepts is more powerful than memorizing formulas."
+    
+</p>
+
+</section>
+
+<footer>
+
+<p>
+
+👑 Crafted with Respect by <strong>Shaurya Pratap Yadav</strong><br>
+
+Dedicated to the Legendary Teacher <strong>Siyaram Kumar Sir</strong>
+
+</p>
+
+</footer>
+
+</body>
+</html>

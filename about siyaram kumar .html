@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>About siyaram kumar</title>
+
+<section>
+    <section class="qualification">
+
+    <h1>🎓 Qualifications & Professional Profile</h1>
+
+    <div class="q-container">
+
+        <div class="q-card">
+            <h2>🎓 Education</h2>
+            <p><strong>National Institute of Technology (NIT), Agartala</strong></p>
+            <p>Bachelor's Degree (2010 – 2014)</p>
+        </div>
+
+        <div class="q-card">
+            <h2>👨‍🏫 Professional Experience</h2>
+            <ul>
+                <li>15+ Years of Teaching Experience</li>
+                <li>Senior Chemistry Educator at Unacademy</li>
+                <li>Former Faculty at FIITJEE</li>
+                <li>Former Faculty at Resonance Eduventures</li>
+                <li>Former Faculty at PACE IIT & Medical</li>
+            </ul>
+        </div>
+
+        <div class="q-card">
+            <h2>🧪 Areas of Expertise</h2>
+            <ul>
+                <li>JEE Main Chemistry</li>
+                <li>JEE Advanced Chemistry</li>
+                <li>Physical Chemistry</li>
+                <li>Organic Chemistry</li>
+                <li>Inorganic Chemistry</li>
+                <li>Concept-Based Teaching</li>
+            </ul>
+        </div>
+
+        <div class="q-card">
+            <h2>🏆 Professional Roles</h2>
+            <ul>
+                <li>Academic Leader</li>
+                <li>Chemistry Mentor</li>
+                <li>Podcast Host</li>
+                <li>Career Guide for IIT-JEE Aspirants</li>
+                <li>Online & Offline Educator</li>
+            </ul>
+        </div>
+
+    </div>
+
+</section>
+
+</head>
+<body>
+
+    <style>
+        .qualification{
+    width:90%;
+    max-width:1200px;
+    margin:80px auto;
+    text-align:center;
+}
+
+.qualification h1{
+    color:#FFD700;
+    font-size:3rem;
+    font-family:'Cinzel',serif;
+    margin-bottom:50px;
+    text-shadow:0 0 20px gold;
+}
+
+/* Grid Layout */
+.q-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.q-card{
+    padding:35px;
+    background:linear-gradient(135deg,#fffdf5,#fff7d6,#ffeeb0);
+    border:2px solid #d4af37;
+    border-radius:20px;
+    transition:.5s;
+    box-shadow:0 10px 25px rgba(212,175,55,.25);
+    text-align:left;
+    overflow:hidden;
+    position:relative;
+}
+
+.q-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.15),
+        transparent
+    );
+    transition:.7s;
+}
+
+.q-card:hover::before{
+    left:100%;
+}
+
+.q-card:hover{
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 0 35px gold;
+    border-color:#FFD700;
+}    </style>
+</body>
+</html>
