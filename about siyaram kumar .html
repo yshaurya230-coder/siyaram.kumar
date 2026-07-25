@@ -1,123 +1,500 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>About siyaram kumar</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<section>
-    <section class="qualification">
+<title>Siyaram Kumar | Royal Tribute</title>
 
-    <h1>🎓 Qualifications & Professional Profile</h1>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
-    <div class="q-container">
+<style>
 
-        <div class="q-card">
-            <h2>🎓 Education</h2>
-            <p><strong>National Institute of Technology (NIT), Agartala</strong></p>
-            <p>Bachelor's Degree (2010 – 2014)</p>
-        </div>
-
-        <div class="q-card">
-            <h2>👨‍🏫 Professional Experience</h2>
-            <ul>
-                <li>15+ Years of Teaching Experience</li>
-                <li>Senior Chemistry Educator at Unacademy</li>
-                <li>Former Faculty at FIITJEE</li>
-                <li>Former Faculty at Resonance Eduventures</li>
-                <li>Former Faculty at PACE IIT & Medical</li>
-            </ul>
-        </div>
-
-        <div class="q-card">
-            <h2>🧪 Areas of Expertise</h2>
-            <ul>
-                <li>JEE Main Chemistry</li>
-                <li>JEE Advanced Chemistry</li>
-                <li>Physical Chemistry</li>
-                <li>Organic Chemistry</li>
-                <li>Inorganic Chemistry</li>
-                <li>Concept-Based Teaching</li>
-            </ul>
-        </div>
-
-        <div class="q-card">
-            <h2>🏆 Professional Roles</h2>
-            <ul>
-                <li>Academic Leader</li>
-                <li>Chemistry Mentor</li>
-                <li>Podcast Host</li>
-                <li>Career Guide for IIT-JEE Aspirants</li>
-                <li>Online & Offline Educator</li>
-            </ul>
-        </div>
-
-    </div>
-
-</section>
-
-</head>
-<body>
-
-    <style>
-        .qualification{
-    width:90%;
-    max-width:1200px;
-    margin:80px auto;
-    text-align:center;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
-.qualification h1{
-    color:#FFD700;
-    font-size:3rem;
-    font-family:'Cinzel',serif;
-    margin-bottom:50px;
-    text-shadow:0 0 20px gold;
-}
-
-/* Grid Layout */
-.q-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-}
-
-.q-card{
-    padding:35px;
-    background:linear-gradient(135deg,#fffdf5,#fff7d6,#ffeeb0);
-    border:2px solid #d4af37;
-    border-radius:20px;
-    transition:.5s;
-    box-shadow:0 10px 25px rgba(212,175,55,.25);
-    text-align:left;
-    overflow:hidden;
+body{
+    font-family:'Poppins',sans-serif;
+    background:#050505;
+    color:#fff;
+    overflow-x:hidden;
     position:relative;
 }
 
-.q-card::before{
+/* Royal Animated Background */
+
+body::before{
     content:"";
-    position:absolute;
-    top:0;
-    left:-100%;
-    width:100%;
-    height:100%;
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at 20% 20%,rgba(0,191,255,.35),transparent 25%),
+        radial-gradient(circle at 80% 80%,rgba(30,144,255,.25),transparent 25%),
+        radial-gradient(circle at 50% 50%,rgba(65,105,225,.18),transparent 40%);
+    animation:glowMove 12s ease-in-out infinite alternate;
+    z-index:-3;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:-100%;
     background:linear-gradient(
         120deg,
-        transparent,
-        rgba(255,255,255,.15),
-        transparent
+        transparent 20%,
+        rgba(0,191,255,.18) 45%,
+        rgba(255,255,255,.12) 50%,
+        rgba(30,144,255,.18) 55%,
+        transparent 80%
     );
-    transition:.7s;
+    animation:lightSweep 15s linear infinite;
+    z-index:-2;
+}
 }
 
-.q-card:hover::before{
-    left:100%;
+
+
+@keyframes glowMove{
+    0%{
+        transform:translate(-5%,-5%) scale(1);
+    }
+    50%{
+        transform:translate(5%,3%) scale(1.15);
+    }
+    100%{
+        transform:translate(-3%,5%) scale(1);
+    }
 }
 
-.q-card:hover{
-    transform:translateY(-10px) scale(1.03);
-    box-shadow:0 0 35px gold;
-    border-color:#FFD700;
-}    </style>
+@keyframes lightSweep{
+    0%{
+        transform:translateX(-40%) rotate(0deg);
+    }
+    100%{
+        transform:translateX(40%) rotate(360deg);
+    }
+}
+
+/* Header */
+
+header{
+
+padding:80px 20px;
+text-align:center;
+background:linear-gradient(135deg,#000,#1a1a1a,#000);
+border-bottom:2px solid #00BFFF;
+box-shadow:0 0 30px #00BFFF;
+}
+
+header h1{
+
+font-family:'Cinzel',serif;
+font-size:4rem;
+color:#87CEFA;;
+text-shadow:
+0 0 10px #00BFFF,
+0 0 25px #1E90FF,
+0 0 50px #4169E1;
+letter-spacing:4px;
+}
+
+header p{
+margin-top:15px;
+font-size:1.3rem;
+color:#B0E0FF;
+}
+
+/* Hero */
+
+.hero{
+
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+padding:70px 30px;
+gap:50px;
+
+}
+
+.hero img{
+
+width:280px;
+height:280px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #00BFFF;
+
+box-shadow:
+0 0 20px #00BFFF,
+0 0 40px #1E90FF,
+0 0 70px #4169E1;
+transition:.5s;
+
+}
+
+.hero img:hover{
+    transform:scale(1.08) rotate(2deg);
+
+    box-shadow:
+    0 0 20px #00BFFF,
+    0 0 40px #1E90FF,
+    0 0 80px #4169E1,
+    0 0 120px #87CEFA;
+}
+
+.about{
+
+max-width:650px;
+padding:30px;
+background:rgba(255,255,255,.06);
+
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(0,191,255,.4);
+box-shadow:0 0 25px rgba(30,144,255,.3);
+
+}
+
+.about h2{
+
+font-family:'Cinzel',serif;
+color:#87CEFA;
+margin-bottom:20px;
+font-size:2rem;
+
+}
+
+.about p{
+
+line-height:1.8;
+font-size:18px;
+color:#ddd;
+
+}
+
+/* Cards */
+
+.info{
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+padding:30px;
+
+}
+
+.card{
+
+width:280px;
+padding:30px;
+text-align:center;
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(0,191,255,.4);
+
+
+border-radius:20px;
+
+transition:.5s;
+
+
+box-shadow:0 0 20px rgba(30,144,255,.3);
+}
+
+.card:hover{
+
+transform:translateY(-15px);
+
+background:linear-gradient(135deg,#001F3F,#111);
+
+box-shadow:
+0 0 15px #00BFFF,
+0 0 35px #1E90FF,
+0 0 70px #4169E1;
+}
+
+.card h3{
+
+color:#87CEFA;
+margin-bottom:15px;
+font-family:'Cinzel',serif;
+font-size:24px;
+
+}
+
+.card p{
+
+color:#ddd;
+line-height:1.6;
+
+}
+
+/* Quote */
+
+.quote{
+
+margin:70px auto;
+width:90%;
+max-width:1000px;
+
+padding:60px;
+
+text-align:center;
+
+border-radius:20px;
+
+background:linear-gradient(135deg,#111,#001F3F,#111);
+
+border:2px solid #00BFFF;
+box-shadow:0 0 30px rgba(30,144,255,.4);
+}
+
+.quote h2{
+
+font-family:'Cinzel',serif;
+color:#87CEFA;
+font-size:2.2rem;
+margin-bottom:20px;
+
+}
+
+.quote p{
+
+font-size:22px;
+font-style:italic;
+color:#fff8dc;
+
+}
+
+/* Footer */
+
+footer{
+
+margin-top:50px;
+padding:25px;
+
+text-align:center;
+
+background:#000;
+
+border-top:2px solid #00BFFF;
+color:#B0E0FF;
+}
+
+/* Button */
+
+.btn{
+
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+
+background:linear-gradient(45deg,#00BFFF,#005EFF);
+color:#fff;
+
+font-weight:bold;
+
+border-radius:40px;
+
+text-decoration:none;
+
+transition:.4s;
+
+}
+
+.btn:hover{
+
+transform:scale(1.1);
+
+box-shadow:
+0 0 20px #00BFFF,
+0 0 40px #1E90FF,
+0 0 80px #4169E1,
+0 0 120px #87CEFA;}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+header h1{
+
+font-size:2.7rem;
+
+}
+
+.hero{
+
+flex-direction:column;
+
+}
+
+.hero img{
+
+width:220px;
+height:220px;
+
+}
+
+.about{
+
+text-align:center;
+
+}
+
+.youtube-btn{
+    background:#FF0000;
+    color:#fff;
+}
+
+.youtube-btn:hover{
+    background:#cc0000;
+    box-shadow:
+        0 0 20px #ff0000,
+        0 0 40px #ff0000;
+}
+
+
+
+.instagram-btn{
+    background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+    color:#fff;
+}
+
+.instagram-btn:hover{
+    transform:scale(1.1);
+    box-shadow:
+        0 0 20px #e1306c,
+        0 0 40px #e1306c;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>SIYARAM KUMAR</h1>
+
+<p>👑 Chemistry Mentor | Unacademy Educator 👑</p>
+
+</header>
+
+<section class="hero">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNRXAs1GUhCYbOiM4Q_JIDartrA1HcPOntafsmeYiqxg&s=10">
+
+<div class="about">
+
+<h2>About Siyaram Kumar</h2>
+
+<p>
+
+Siyaram Kumar is one of the most respected Chemistry educators for IIT-JEE aspirants.
+With 14+ years of teaching excellence, his conceptual approach and inspiring mentorship
+have helped thousands of students achieve their dreams.
+
+</p>
+
+<a href="about siyaram kumar .html" class="btn">Explore More</a>
+
+<br><br>
+
+<a href="https://www.youtube.com/results?search_query=siyaram+kumar"
+   class="btn youtube-btn"
+   target="_blank">
+   ▶ Visit YouTube
+</a>
+
+
+<br><br>
+
+<a href="https://www.instagram.com/iamsiyaramkumar/"
+   class="btn instagram-btn"
+   target="_blank">
+   📷Visit Instagram
+</a>
+
+
+</div>
+
+</section>
+
+<section class="info">
+
+<div class="card">
+
+<h3>Experience</h3>
+
+<p>14+ Years of Teaching Excellence</p>
+
+</div>
+
+<div class="card">
+
+<h3>Specialization</h3>
+
+<p>IIT-JEE Chemistry</p>
+
+</div>
+
+<div class="card">
+
+<h3>Platform</h3>
+
+<p>Unacademy</p>
+
+</div>
+
+<div class="card">
+
+<h3>Social Media</h3>
+
+<p>Instagram<br>@iamsiyaramkumar</p>
+
+<br>
+
+<p>YouTube<br>Siyaram Kumar</p>
+
+</div>
+
+</section>
+
+<section class="quote">
+
+<h2>Teaching Philosophy</h2>
+
+<p>
+
+"Understanding concepts is more powerful than memorizing formulas."
+    
+</p>
+
+</section>
+
+<footer>
+
+<p>
+
+👑 Crafted with Respect by <strong>Shaurya Pratap Yadav</strong><br>
+
+Dedicated to the Legendary Teacher <strong>Siyaram Kumar Sir</strong>
+
+</p>
+
+</footer>
+
 </body>
 </html>
