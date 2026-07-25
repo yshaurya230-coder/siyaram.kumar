@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Siyaram Kumar | Royal Tribute</title>
+<title>About Siyaram Kumar</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -14,372 +14,195 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 scroll-behavior:smooth;
 }
 
 body{
-    font-family:'Poppins',sans-serif;
-    background:#050505;
-    color:#fff;
-    overflow-x:hidden;
-    position:relative;
+background:#050B18;
+color:white;
+overflow-x:hidden;
 }
 
-/* Royal Animated Background */
+/* Background */
 
 body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    background:
-        radial-gradient(circle at 20% 20%,rgba(255,215,0,.35),transparent 25%),
-        radial-gradient(circle at 80% 80%,rgba(255,215,0,.25),transparent 25%),
-        radial-gradient(circle at 50% 50%,rgba(255,255,255,.08),transparent 40%);
-    animation:glowMove 12s ease-in-out infinite alternate;
-    z-index:-3;
+content:"";
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at 20% 20%,rgba(0,191,255,.25),transparent 30%),
+radial-gradient(circle at 80% 80%,rgba(65,105,225,.25),transparent 30%);
+z-index:-2;
+animation:move 10s infinite alternate;
 }
 
-body::after{
-    content:"";
-    position:fixed;
-    inset:-100%;
-    background:linear-gradient(
-        120deg,
-        transparent 20%,
-        rgba(255,215,0,.18) 45%,
-        rgba(255,255,255,.12) 50%,
-        rgba(255,215,0,.18) 55%,
-        transparent 80%
-    );
-    animation:lightSweep 15s linear infinite;
-    z-index:-2;
-}
-
-@keyframes glowMove{
-    0%{
-        transform:translate(-5%,-5%) scale(1);
-    }
-    50%{
-        transform:translate(5%,3%) scale(1.15);
-    }
-    100%{
-        transform:translate(-3%,5%) scale(1);
-    }
-}
-
-@keyframes lightSweep{
-    0%{
-        transform:translateX(-40%) rotate(0deg);
-    }
-    100%{
-        transform:translateX(40%) rotate(360deg);
-    }
+@keyframes move{
+0%{transform:translate(-4%,-3%);}
+100%{transform:translate(4%,4%);}
 }
 
 /* Header */
 
 header{
-
-padding:80px 20px;
+padding:70px 20px;
 text-align:center;
-background:linear-gradient(135deg,#000,#1a1a1a,#000);
-border-bottom:2px solid gold;
-box-shadow:0 0 30px gold;
+background:linear-gradient(135deg,#081C3A,#102A56,#081C3A);
+box-shadow:0 0 25px #00BFFF;
 }
 
 header h1{
-
+font-size:3.5rem;
 font-family:'Cinzel',serif;
-font-size:4rem;
-color:#FFD700;
+color:#87CEFA;
 text-shadow:
-0 0 10px gold,
-0 0 20px gold,
-0 0 40px gold;
-letter-spacing:4px;
+0 0 10px #00BFFF,
+0 0 25px #1E90FF;
 }
 
 header p{
 margin-top:15px;
-font-size:1.3rem;
-color:#f5d76e;
+font-size:20px;
+color:#B0E0FF;
 }
 
 /* Hero */
 
 .hero{
-
+width:90%;
+max-width:1200px;
+margin:60px auto;
 display:flex;
-justify-content:center;
 align-items:center;
-flex-wrap:wrap;
-padding:70px 30px;
+justify-content:center;
 gap:50px;
-
+flex-wrap:wrap;
 }
 
-.hero img{
-
-width:280px;
-height:280px;
-border-radius:50%;
-object-fit:cover;
-border:5px solid gold;
-
-box-shadow:
-0 0 20px gold,
-0 0 40px #FFD700,
-0 0 70px #FFD700;
-
-transition:.5s;
-
-}
-
-.hero img:hover{
-
-transform:scale(1.08) rotate(2deg);
-
-box-shadow:
-0 0 30px gold,
-0 0 60px gold,
-0 0 120px gold;
-
-}
+    
 
 .about{
-
 max-width:650px;
-padding:30px;
-background:rgba(255,255,255,.06);
-
-backdrop-filter:blur(15px);
-
-border:1px solid rgba(255,215,0,.3);
-
-border-radius:20px;
-
-box-shadow:0 0 25px rgba(255,215,0,.25);
-
 }
 
 .about h2{
-
+font-size:2.2rem;
 font-family:'Cinzel',serif;
-color:#FFD700;
+color:#87CEFA;
 margin-bottom:20px;
-font-size:2rem;
-
 }
 
 .about p{
-
-line-height:1.8;
-font-size:18px;
+line-height:1.9;
+font-size:17px;
 color:#ddd;
+}
 
+/* Section */
+
+section{
+padding:40px 8%;
+}
+
+.title{
+text-align:center;
+font-size:2.7rem;
+font-family:'Cinzel',serif;
+color:#87CEFA;
+margin-bottom:50px;
+text-shadow:0 0 20px #00BFFF;
 }
 
 /* Cards */
 
-.info{
-
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
-padding:30px;
-
 }
 
 .card{
-
-width:280px;
+background:linear-gradient(135deg,#0A2540,#123A6B,#0A2540);
 padding:30px;
-text-align:center;
-
-background:rgba(255,255,255,.05);
-
-backdrop-filter:blur(15px);
-
-border:1px solid rgba(255,215,0,.4);
-
 border-radius:20px;
+border:2px solid #00BFFF;
+position:relative;
+overflow:hidden;
+transition:.4s;
+box-shadow:0 10px 25px rgba(30,144,255,.3);
+}
 
-transition:.5s;
+.card::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,.15),
+transparent
+);
+transition:.8s;
+}
 
-box-shadow:0 0 20px rgba(255,215,0,.2);
-
+.card:hover::before{
+left:100%;
 }
 
 .card:hover{
-
-transform:translateY(-15px);
-
-background:linear-gradient(135deg,#2c2100,#111);
-
+transform:translateY(-10px);
 box-shadow:
-0 0 20px gold,
-0 0 50px gold;
-
+0 0 20px #00BFFF,
+0 0 40px #1E90FF,
+0 0 70px #4169E1;
 }
 
 .card h3{
-
-color:#FFD700;
+color:#87CEFA;
 margin-bottom:15px;
-font-family:'Cinzel',serif;
 font-size:24px;
+}
 
+.card ul{
+padding-left:20px;
+line-height:2;
 }
 
 .card p{
-
-color:#ddd;
-line-height:1.6;
-
-}
-
-/* Quote */
-
-.quote{
-
-margin:70px auto;
-width:90%;
-max-width:1000px;
-
-padding:60px;
-
-text-align:center;
-
-border-radius:20px;
-
-background:linear-gradient(135deg,#111,#2c2100,#111);
-
-border:2px solid gold;
-
-box-shadow:0 0 30px rgba(255,215,0,.4);
-
-}
-
-.quote h2{
-
-font-family:'Cinzel',serif;
-color:#FFD700;
-font-size:2.2rem;
-margin-bottom:20px;
-
-}
-
-.quote p{
-
-font-size:22px;
-font-style:italic;
-color:#fff8dc;
-
+line-height:1.8;
 }
 
 /* Footer */
 
 footer{
-
 margin-top:50px;
 padding:25px;
-
 text-align:center;
-
-background:#000;
-
-border-top:2px solid gold;
-
-color:#f7d86d;
-
+background:#081C3A;
+border-top:2px solid #00BFFF;
+color:#B0E0FF;
 }
-
-/* Button */
-
-.btn{
-
-display:inline-block;
-margin-top:30px;
-padding:15px 35px;
-
-background:linear-gradient(45deg,#FFD700,#b8860b);
-
-color:#000;
-
-font-weight:bold;
-
-border-radius:40px;
-
-text-decoration:none;
-
-transition:.4s;
-
-}
-
-.btn:hover{
-
-transform:scale(1.1);
-
-box-shadow:
-0 0 20px gold,
-0 0 40px gold;
-
-}
-
-/* Responsive */
 
 @media(max-width:768px){
 
 header h1{
-
-font-size:2.7rem;
-
+font-size:2.5rem;
 }
 
 .hero{
-
 flex-direction:column;
-
 }
 
 .hero img{
-
 width:220px;
 height:220px;
-
 }
 
-.about{
-
-text-align:center;
-
-}
-
-.youtube-btn{
-    background:#FF0000;
-    color:#fff;
-}
-
-.youtube-btn:hover{
-    background:#cc0000;
-    box-shadow:
-        0 0 20px #ff0000,
-        0 0 40px #ff0000;
-}
-
-
-
-.instagram-btn{
-    background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
-    color:#fff;
-}
-
-.instagram-btn:hover{
-    transform:scale(1.1);
-    box-shadow:
-        0 0 20px #e1306c,
-        0 0 40px #e1306c;
+.title{
+font-size:2rem;
 }
 
 }
@@ -392,15 +215,14 @@ text-align:center;
 
 <header>
 
-<h1>SIYARAM KUMAR</h1>
+<h1>CHEMISTRY KING </h1>
 
-<p>👑 Chemistry Mentor | Unacademy Educator 👑</p>
+<p>Chemistry Mentor • Unacademy Educator • IIT-JEE Specialist</p>
 
 </header>
 
-<section class="hero">
+<div class="hero">
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNRXAs1GUhCYbOiM4Q_JIDartrA1HcPOntafsmeYiqxg&s=10">
 
 <div class="about">
 
@@ -408,85 +230,81 @@ text-align:center;
 
 <p>
 
-Siyaram Kumar is one of the most respected Chemistry educators for IIT-JEE aspirants.
-With 14+ years of teaching excellence, his conceptual approach and inspiring mentorship
-have helped thousands of students achieve their dreams.
+Siyaram Kumar is a renowned Chemistry educator known for mentoring IIT-JEE aspirants through concept-driven teaching. His engaging classroom style and simplified explanations have helped thousands of students strengthen their understanding of Chemistry and prepare for competitive examinations.
 
 </p>
 
-<a href="about siyaram kumar .html" class="btn">Explore More</a>
-
-<br><br>
-
-<a href="https://www.youtube.com/results?search_query=siyaram+kumar"
-   class="btn youtube-btn"
-   target="_blank">
-   ▶ Visit YouTube
-</a>
-
-
-<br><br>
-
-<a href="https://www.instagram.com/iamsiyaramkumar/"
-   class="btn instagram-btn"
-   target="_blank">
-   Visit Instagram
-</a>
-
+</div>
 
 </div>
 
-</section>
+<section>
 
-<section class="info">
+<h2 class="title">Qualifications & Professional Profile</h2>
+
+<div class="grid">
 
 <div class="card">
 
-<h3>Experience</h3>
-
-<p>14+ Years of Teaching Excellence</p>
-
-</div>
-
-<div class="card">
-
-<h3>Specialization</h3>
-
-<p>IIT-JEE Chemistry</p>
-
-</div>
-
-<div class="card">
-
-<h3>Platform</h3>
-
-<p>Unacademy</p>
-
-</div>
-
-<div class="card">
-
-<h3>Social Media</h3>
-
-<p>Instagram<br>@iamsiyaramkumar</p>
-
-<br>
-
-<p>YouTube<br>Siyaram Kumar</p>
-
-</div>
-
-</section>
-
-<section class="quote">
-
-<h2>Teaching Philosophy</h2>
+<h3>🎓 Education</h3>
 
 <p>
-
-"Understanding concepts is more powerful than memorizing formulas."
-    
+Bachelor's Degree from
+<strong>National Institute of Technology (NIT), Agartala</strong>.
 </p>
+
+</div>
+
+<div class="card">
+
+<h3>👨‍🏫 Teaching Experience</h3>
+
+<ul>
+
+<li>15+ Years of Teaching Experience</li>
+<li>Senior Chemistry Educator at Unacademy</li>
+<li>Former Faculty at FIITJEE</li>
+<li>Former Faculty at Resonance</li>
+<li>Former Faculty at PACE IIT & Medical</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>🧪 Areas of Expertise</h3>
+
+<ul>
+
+<li>JEE Main Chemistry</li>
+<li>JEE Advanced Chemistry</li>
+<li>Physical Chemistry</li>
+<li>Organic Chemistry</li>
+<li>Inorganic Chemistry</li>
+<li>Concept-Based Learning</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>🏆 Professional Roles</h3>
+
+<ul>
+
+<li>Chemistry Mentor</li>
+<li>Academic Leader</li>
+<li>Career Guide</li>
+<li>Online & Offline Educator</li>
+<li>Motivational Speaker</li>
+
+</ul>
+
+</div>
+
+</div>
 
 </section>
 
@@ -494,9 +312,11 @@ have helped thousands of students achieve their dreams.
 
 <p>
 
-👑 Crafted with Respect by <strong>Shaurya Pratap Yadav</strong><br>
+Created with ❤️ by <strong>Shaurya Pratap Yadav</strong>
 
-Dedicated to the Legendary Teacher <strong>Siyaram Kumar Sir</strong>
+<br><br>
+
+Dedicated to <strong>Siyaram Kumar Sir</strong>
 
 </p>
 
